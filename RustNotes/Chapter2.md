@@ -8,6 +8,8 @@ This chapter covered the following concepts
 - [[#Enumerations]]
 - [[#Pattern matching with enum]]
 
+The code for this chapter is in [the treehouse directory](/treehouse)
+
 ## Structs
 Structs hold data and can be defined as
 ```rust
