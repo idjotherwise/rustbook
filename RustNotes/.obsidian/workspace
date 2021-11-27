@@ -1,0 +1,106 @@
+{
+  "main": {
+    "id": "3419ee89ae5fb946",
+    "type": "split",
+    "children": [
+      {
+        "id": "25d81c4e4aa8db6a",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Chapter2.md",
+            "mode": "source"
+          }
+        },
+        "group": "39ed9230cd78581c"
+      },
+      {
+        "id": "3aa08f71892273ff",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Chapter2.md",
+            "mode": "preview"
+          }
+        },
+        "group": "39ed9230cd78581c"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8d445250e632d39f",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e53b74393bdb66b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "303d09c9ba1100d3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b4927b2a638697e4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "c04f8b5566156b35",
+    "type": "split",
+    "children": [
+      {
+        "id": "6a129f7f8ae070d0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "153ab72946a70548",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Chapter2.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "25d81c4e4aa8db6a",
+  "lastOpenFiles": [
+    "Chapter2.md"
+  ]
+}
