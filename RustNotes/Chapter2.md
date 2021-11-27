@@ -1,3 +1,13 @@
+# Overview
+This chapter covered the following concepts
+- Printing and formatting text
+- [[#Types]] - Working with strings (and types)
+- Using `for`, `loop` and `if`.
+- [[#Arrays and Vectors]]
+- [[#Structs]]
+- [[#Enumerations]]
+- [[#Pattern matching with enum]]
+
 ## Structs
 Structs hold data and can be defined as
 ```rust
@@ -96,4 +106,55 @@ match visitor_list {
 		// deal with missing match
 	}
 }
+```
+
+
+## Enumerations
+We can define a type which can only be equal to a set of predefined values with `enum`:
+
+```rust
+#[derive(Debug)]
+enum VisitorAction {
+	Accept,
+	AcceptWithNote { note: String },
+	Refuse,
+	Probation,
+}
+```
+
+Variables from an enumeration can be assigned with `let visitor_action = VisitorAction::Accept;`. Actions with additional data can be assigned with
+```rust
+let visitor_action = VisitorAction::AcceptWithNote{note: "This is a note for the action".to_string()};
+```
+
+### Pattern matching with `enum`
+
+**Pattern matching** serves two basic purposes:
+- Checks to see if a condition is true and runs the associated code
+- Extract fields from complicated types
+
+```rust
+match visitor_action {
+	VisitorAction::Accept => println!("Welcome!"),
+	VisitorAction::Probation => {
+		do_something_more_involved();
+	}
+	VisitorAction::AcceptWithNote { note } => {
+		println!("{}", note);
+	}
+	_ => println!("No entry!");
+}
+```
+
+The syntax for `VisitorAction::AcceptWithNote { note } => {printl!("{}", note);}` allows us to capture the `note` data which is associated with the action in the `enum` defintiion - this is called _destructuring_. 
+The `_` case is used as a 'all other cases' (or `else`) statement.
+
+## Types
+- `String` is stored as a Vector of bytes (`Vec<u8>`) but is guranteed to be a valid UTF-8 sequence. It is heap allocated, growable (mutable size) and not null terminated.
+- `&str` is a slice (`&[u8]`) that always points to a valid UTF-8 sequence and can be used as a _view_ into a `String`. So `&str` is a static version of the _mutable_ `String`.
+- `i8` is an 8-bit signed integer (with values from -128 to 127)
+
+You construct a string with
+```rust
+String::from("this is a string")
 ```
