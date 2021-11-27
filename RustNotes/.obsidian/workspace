@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Chapter2.md",
+            "file": "Chapter3.md",
             "mode": "source"
           }
         },
@@ -21,7 +21,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Chapter2.md",
+            "file": "Chapter3.md",
             "mode": "preview"
           }
         },
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Chapter2.md",
+                "file": "Chapter3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +101,7 @@
   },
   "active": "25d81c4e4aa8db6a",
   "lastOpenFiles": [
-    "Chapter2.md",
-    "Chapter3.md"
+    "Chapter3.md",
+    "Chapter2.md"
   ]
 }
