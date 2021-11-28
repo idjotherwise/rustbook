@@ -1,6 +1,6 @@
 use bracket_lib::prelude::*;
 
-// Structs
+// Structs followed by Implementations
 
 struct State {
     player: Player,
@@ -9,20 +9,6 @@ struct State {
     mode: GameMode,
     score: i32,
 }
-
-struct Player {
-    x: i32,
-    y: i32,
-    velocity: f32,
-}
-
-struct Obstacle {
-    x: i32,
-    gap_y: i32,
-    size: i32,
-}
-
-// Implementations
 
 impl State {
     fn new() -> Self {
@@ -97,6 +83,12 @@ impl State {
     }
 }
 
+struct Player {
+    x: i32,
+    y: i32,
+    velocity: f32,
+}
+
 impl Player {
     fn new(x: i32, y: i32) -> Self {
         Player {
@@ -124,14 +116,10 @@ impl Player {
     }
 }
 
-impl GameState for State {
-    fn tick(&mut self, ctx: &mut BTerm) {
-        match self.mode {
-            GameMode::Menu => self.main_menu(ctx),
-            GameMode::End => self.dead(ctx),
-            GameMode::Playing => self.play(ctx),
-        }
-    }
+struct Obstacle {
+    x: i32,
+    gap_y: i32,
+    size: i32,
 }
 
 impl Obstacle {
@@ -160,6 +148,16 @@ impl Obstacle {
         let player_above_gap = player.y < self.gap_y - half_size;
         let player_below_gap = player.y > self.gap_y + half_size;
         does_x_match && (player_above_gap || player_below_gap)
+    }
+}
+
+impl GameState for State {
+    fn tick(&mut self, ctx: &mut BTerm) {
+        match self.mode {
+            GameMode::Menu => self.main_menu(ctx),
+            GameMode::End => self.dead(ctx),
+            GameMode::Playing => self.play(ctx),
+        }
     }
 }
 
